@@ -19,8 +19,8 @@ public class WaveCheck : MonoBehaviour
     {
         if(control.getStarted() == false)
         {
-            WaveText.text = "Wave " + control.getWave().ToString()
-            + "in " + control.getTime().ToString();
+            WaveText.text = "Wave " + (control.getWave()+1).ToString()
+            + " in " + control.getTime().ToString();
         }
         else
         {
