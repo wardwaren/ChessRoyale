@@ -36,6 +36,7 @@ public class Level : MonoBehaviour
                 if(name == "PlayField")
                 {
                     Instantiate(currentTower, wordPos, transform.rotation);
+                    currentTower = null;
                 }
             }
 
