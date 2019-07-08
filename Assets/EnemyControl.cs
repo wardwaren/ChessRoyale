@@ -21,19 +21,17 @@ public class EnemyControl : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (started == false)
             {
-                Debug.Log(numOfEnemies);
+                currentWave++;
                 for (int i = 0; i < timeBetweenWaves; i++)
                 {
                     yield return new WaitForSeconds(1);
                     time--;
                 }
-                currentWave++;
+                Debug.Log(currentWave);
+                
                 numOfWaves--;
 
-                Debug.Log(numOfEnemies);
-                Debug.Log(numOfWaves);
-                Debug.Log("There");
-                Debug.Log(started);
+
                 started = true;
             }
             else
@@ -43,9 +41,7 @@ public class EnemyControl : MonoBehaviour
                     started = false;
                     time = timeBetweenWaves;
                 }
-                Debug.Log(numOfEnemies);
-                Debug.Log(numOfWaves);
-                Debug.Log(started);
+
             }
         } while (numOfWaves != 0);
     }
