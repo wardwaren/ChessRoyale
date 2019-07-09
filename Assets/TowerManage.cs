@@ -8,6 +8,7 @@ public class TowerManage : MonoBehaviour
     [SerializeField] int valmin = 1;
     [SerializeField] int valmax = 5;
 
+    GameObject TowerPanel;
     GameObject panel;
     EnemyControl EnemyControl;
 
@@ -15,6 +16,7 @@ public class TowerManage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TowerPanel = GameObject.Find("TowerPanel");
         EnemyControl = FindObjectOfType<EnemyControl>();
         panel = GameObject.Find("Panel");
     }
@@ -53,6 +55,15 @@ public class TowerManage : MonoBehaviour
     
     public void AssignValue()
     {
-        gameObject.GetComponent<Button>().interactable = false;
+        for (int i = 0; i < TowerPanel.transform.childCount; i++)
+        {
+            /// All your stuff with transform.GetChild(i) here...
+            GameObject child = TowerPanel.transform.GetChild(i).gameObject;
+
+            if (child.activeSelf == false)
+            {
+
+            }
+        }
     }
 }

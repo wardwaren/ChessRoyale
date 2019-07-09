@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
@@ -37,10 +38,12 @@ public class Level : MonoBehaviour
                 {
                     Instantiate(currentTower, wordPos, transform.rotation);
                     currentTower = null;
+
                 }
             }
 
         }
+
          
     }
     
@@ -48,6 +51,7 @@ public class Level : MonoBehaviour
     public void SetTower(int num)
     {
         currentTower = towers[num];
+
     }
 
 }
