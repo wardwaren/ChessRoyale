@@ -132,8 +132,9 @@ GameObject:
   - component: {fileID: 124182259}
   - component: {fileID: 124182258}
   - component: {fileID: 124182257}
+  - component: {fileID: 124182260}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Offered Tower 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1391308100}
+      - m_Target: {fileID: 124182260}
         m_MethodName: AssignValue
         m_Mode: 1
         m_Arguments:
@@ -252,6 +253,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124182255}
   m_CullTransparentMesh: 0
+--- !u!114 &124182260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124182255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &126968852
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,58 +357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30b96dbdcea21544a2cfd59adbe0c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &179876665
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 179876667}
-  - component: {fileID: 179876666}
-  m_Layer: 0
-  m_Name: LevelManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &179876666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179876665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3065e399100b1e74a8cc77adceee4238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towers:
-  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
-  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
-  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
-  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
-  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
-  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
-  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
-  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
---- !u!4 &179876667
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179876665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 169.17801, y: 77.739365, z: -31.769073}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &205195113
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,16 +548,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.9215687, g: 0.9215687, b: 0.9215687, a: 0.392}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 7b75f741d73c2a54c977696f21dfc183, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -800,6 +761,58 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &489970341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489970343}
+  - component: {fileID: 489970342}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &489970342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489970341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3065e399100b1e74a8cc77adceee4238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towers:
+  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
+  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
+  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
+  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
+  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
+  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
+  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
+  - {fileID: 219154296981662993, guid: a8b7024421e1d5948ab7ef67f82a425d, type: 3}
+--- !u!4 &489970343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489970341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 255.86407, y: 150.88376, z: 51.821503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,8 +955,9 @@ GameObject:
   - component: {fileID: 676224864}
   - component: {fileID: 676224863}
   - component: {fileID: 676224862}
+  - component: {fileID: 676224865}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Offered Tower 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1012,7 +1026,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1391308100}
+      - m_Target: {fileID: 676224865}
         m_MethodName: AssignValue
         m_Mode: 1
         m_Arguments:
@@ -1062,6 +1076,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676224860}
   m_CullTransparentMesh: 0
+--- !u!114 &676224865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676224860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &676852085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,8 +1100,9 @@ GameObject:
   - component: {fileID: 676852089}
   - component: {fileID: 676852088}
   - component: {fileID: 676852087}
+  - component: {fileID: 676852090}
   m_Layer: 5
-  m_Name: Button1 (1)
+  m_Name: BoughtTower 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1144,7 +1171,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 179876666}
+      - m_Target: {fileID: 676852090}
+        m_MethodName: TurnOffButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 489970342}
         m_MethodName: SetTower
         m_Mode: 3
         m_Arguments:
@@ -1194,6 +1232,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676852085}
   m_CullTransparentMesh: 0
+--- !u!114 &676852090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676852085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &731953948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,8 +1492,9 @@ GameObject:
   - component: {fileID: 961115610}
   - component: {fileID: 961115609}
   - component: {fileID: 961115608}
+  - component: {fileID: 961115611}
   m_Layer: 5
-  m_Name: Button1 (3)
+  m_Name: BoughtTower 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1512,7 +1563,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 179876666}
+      - m_Target: {fileID: 961115611}
+        m_MethodName: TurnOffButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 489970342}
         m_MethodName: SetTower
         m_Mode: 3
         m_Arguments:
@@ -1562,6 +1624,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961115606}
   m_CullTransparentMesh: 0
+--- !u!114 &961115611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961115606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &966540497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966540498}
+  - component: {fileID: 966540500}
+  - component: {fileID: 966540499}
+  m_Layer: 0
+  m_Name: red_button00
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &966540498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966540497}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11, y: 3.09, z: -1.02}
+  m_LocalScale: {x: 7, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1337628872}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &966540499
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966540497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8999999, y: 0.45, z: 0.2}
+  m_Center: {x: 0.000000014901161, y: 0, z: 0}
+--- !u!212 &966540500
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966540497}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7b75f741d73c2a54c977696f21dfc183, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.9, y: 0.45}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1034558523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,8 +1741,9 @@ GameObject:
   - component: {fileID: 1034558527}
   - component: {fileID: 1034558526}
   - component: {fileID: 1034558525}
+  - component: {fileID: 1034558528}
   m_Layer: 5
-  m_Name: Button1
+  m_Name: BoughtTower 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1644,7 +1812,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 179876666}
+      - m_Target: {fileID: 1034558528}
+        m_MethodName: TurnOffButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 489970342}
         m_MethodName: SetTower
         m_Mode: 3
         m_Arguments:
@@ -1694,6 +1873,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034558523}
   m_CullTransparentMesh: 0
+--- !u!114 &1034558528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034558523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042226684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,8 +1943,9 @@ GameObject:
   - component: {fileID: 1103588129}
   - component: {fileID: 1103588128}
   - component: {fileID: 1103588127}
+  - component: {fileID: 1103588130}
   m_Layer: 5
-  m_Name: Button1 (4)
+  m_Name: BoughtTower 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1822,7 +2014,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 179876666}
+      - m_Target: {fileID: 1103588130}
+        m_MethodName: TurnOffButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 489970342}
         m_MethodName: SetTower
         m_Mode: 3
         m_Arguments:
@@ -1872,6 +2075,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103588125}
   m_CullTransparentMesh: 0
+--- !u!114 &1103588130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103588125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1131269228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,8 +2145,9 @@ GameObject:
   - component: {fileID: 1174504602}
   - component: {fileID: 1174504601}
   - component: {fileID: 1174504600}
+  - component: {fileID: 1174504603}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Offered Tower 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2000,7 +2216,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1391308100}
+      - m_Target: {fileID: 1174504603}
         m_MethodName: AssignValue
         m_Mode: 1
         m_Arguments:
@@ -2050,6 +2266,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174504598}
   m_CullTransparentMesh: 0
+--- !u!114 &1174504603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174504598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1230123572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,8 +2439,9 @@ GameObject:
   - component: {fileID: 1273923161}
   - component: {fileID: 1273923160}
   - component: {fileID: 1273923159}
+  - component: {fileID: 1273923162}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Offered Tower 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2281,7 +2510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1391308100}
+      - m_Target: {fileID: 1273923162}
         m_MethodName: AssignValue
         m_Mode: 1
         m_Arguments:
@@ -2331,6 +2560,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273923157}
   m_CullTransparentMesh: 0
+--- !u!114 &1273923162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273923157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1274575097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,7 +2727,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.71, y: -2.7, z: -10.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 966540498}
+  - {fileID: 2093940028}
   m_Father: {fileID: 1744069249}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2498,11 +2741,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337628870}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 12.8, y: 7.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0.1}
+  m_Center: {x: 0, y: 0, z: -0.1}
 --- !u!1 &1362574420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,8 +3224,9 @@ GameObject:
   - component: {fileID: 1588301266}
   - component: {fileID: 1588301265}
   - component: {fileID: 1588301264}
+  - component: {fileID: 1588301267}
   m_Layer: 5
-  m_Name: Button1 (2)
+  m_Name: BoughtTower 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3051,7 +3295,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 179876666}
+      - m_Target: {fileID: 1588301267}
+        m_MethodName: TurnOffButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 489970342}
         m_MethodName: SetTower
         m_Mode: 3
         m_Arguments:
@@ -3101,6 +3356,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588301262}
   m_CullTransparentMesh: 0
+--- !u!114 &1588301267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588301262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1633959298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,8 +4156,9 @@ GameObject:
   - component: {fileID: 2066041671}
   - component: {fileID: 2066041670}
   - component: {fileID: 2066041669}
+  - component: {fileID: 2066041672}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Offered Tower 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3959,7 +4227,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1391308100}
+      - m_Target: {fileID: 2066041672}
         m_MethodName: AssignValue
         m_Mode: 1
         m_Arguments:
@@ -4009,3 +4277,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066041667}
   m_CullTransparentMesh: 0
+--- !u!114 &2066041672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066041667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d32693b5b3ed469c1bfa9f99c41bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2093940027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2093940028}
+  - component: {fileID: 2093940029}
+  m_Layer: 0
+  m_Name: red_button00 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2093940028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093940027}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11, y: -3.71, z: -1.02}
+  m_LocalScale: {x: 7, y: 4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1337628872}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2093940029
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093940027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8999999, y: 0.45, z: 0.2}
+  m_Center: {x: 0.000000014901161, y: 0, z: 0}

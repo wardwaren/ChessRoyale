@@ -12,6 +12,7 @@ public class TowerManage : MonoBehaviour
     GameObject panel;
     EnemyControl EnemyControl;
 
+    int BoughtTower;
     int wave = -1;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,10 @@ public class TowerManage : MonoBehaviour
         TowerPanel = GameObject.Find("TowerPanel");
         EnemyControl = FindObjectOfType<EnemyControl>();
         panel = GameObject.Find("Panel");
+        foreach (Transform child in TowerPanel.transform)
+        {
+            child.gameObject.SetActive(false); 
+        }
     }
 
     // Update is called once per frame
@@ -32,10 +37,16 @@ public class TowerManage : MonoBehaviour
 
             foreach(Transform child in panel.transform)
             {
+                if(child.gameObject.activeSelf == false)
+                {
+                    child.gameObject.SetActive(true);
+                }
+
                 Button button = child.gameObject.GetComponent<Button>();
 
-                button.GetComponentInChildren<Text>().text = Random.Range(valmin, valmax).ToString();
-                
+                int value = Random.Range(valmin, valmax);
+                button.GetComponentInChildren<Text>().text = value.ToString();
+                button.GetComponent<ButtonScript>().setTowerNumber(value);
             }
             wave++;
         }
@@ -53,17 +64,5 @@ public class TowerManage : MonoBehaviour
         }
     }
     
-    public void AssignValue()
-    {
-        for (int i = 0; i < TowerPanel.transform.childCount; i++)
-        {
-            /// All your stuff with transform.GetChild(i) here...
-            GameObject child = TowerPanel.transform.GetChild(i).gameObject;
 
-            if (child.activeSelf == false)
-            {
-
-            }
-        }
-    }
 }

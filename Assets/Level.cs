@@ -16,7 +16,7 @@ public class Level : MonoBehaviour
     {
         playField = GameObject.Find("PlayField");
         zPositionField = playField.transform.position.z;
-        Debug.Log(playField.transform.position);
+
     }
 
     // Update is called once per frame
@@ -47,6 +47,10 @@ public class Level : MonoBehaviour
          
     }
     
+    public GameObject getTower()
+    {
+        return currentTower;
+    }
 
     public void SetTower(int num)
     {
