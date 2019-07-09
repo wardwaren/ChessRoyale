@@ -13,7 +13,7 @@ public class TowerManage : MonoBehaviour
     EnemyControl EnemyControl;
 
     int BoughtTower;
-    int wave = -1;
+    int wave = 0;
     // Start is called before the first frame update
     void Start()
     {

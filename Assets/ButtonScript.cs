@@ -36,6 +36,11 @@ public class ButtonScript : MonoBehaviour
         return TowerNumber;
     }
 
+    public void setCurrentTower()
+    {
+        Level.GetComponent<Level>().SetTower(TowerNumber);
+    }
+
     public void AssignValue()
     {
         for (int i = 0; i < TowerPanel.transform.childCount; i++)

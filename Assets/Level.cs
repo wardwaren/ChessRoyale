@@ -55,7 +55,6 @@ public class Level : MonoBehaviour
     public void SetTower(int num)
     {
         currentTower = towers[num];
-
     }
 
 }
