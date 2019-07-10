@@ -7,19 +7,15 @@ public class TowerManage : MonoBehaviour
 {
     [SerializeField] int valmin = 1;
     [SerializeField] int valmax = 5;
-
-    GameObject TowerPanel;
-    GameObject panel;
-    EnemyControl EnemyControl;
+    [SerializeField] GameObject TowerPanel;
+    [SerializeField] GameObject panel;
+    [SerializeField] EnemyControl EnemyControl;
 
     int BoughtTower;
     int wave = 0;
     // Start is called before the first frame update
     void Start()
     {
-        TowerPanel = GameObject.Find("TowerPanel");
-        EnemyControl = FindObjectOfType<EnemyControl>();
-        panel = GameObject.Find("Panel");
         foreach (Transform child in TowerPanel.transform)
         {
             child.gameObject.SetActive(false); 
@@ -30,9 +26,7 @@ public class TowerManage : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-       // Debug.Log("Wave: " + wave);
-      //  Debug.Log("GetWave: " + EnemyControl.getWave());
-
+     
         if (wave == EnemyControl.getWave())
         {
 

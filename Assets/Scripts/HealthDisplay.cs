@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
+    [SerializeField] Player player;
+
     Text scoreText;
-    Player player;
+   
 
 
     // Start is called before the first frame update
     void Start()
     {
         scoreText = GetComponent<Text>();
-        player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame

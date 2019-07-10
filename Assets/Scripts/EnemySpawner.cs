@@ -5,16 +5,15 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfig> waveConfigs;
-
+    [SerializeField] EnemyControl EnemyControl;
 
     int startingWave = 0;
     int numOfEnemies = 0;
-    EnemyControl EnemyControl;
+    
     
     // Start is called before the first frame update
     void Start()
     {
-        EnemyControl = FindObjectOfType<EnemyControl>();
 
     }
 

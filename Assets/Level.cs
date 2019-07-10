@@ -6,18 +6,16 @@ using UnityEngine.UI;
 public class Level : MonoBehaviour
 {
     [SerializeField] List<GameObject> towers;
+    [SerializeField] GameObject playField;
 
     Dictionary<int, int> OwnedTowers = new Dictionary<int, int>();
-    GameObject playField;
     GameObject currentTower = null;
     float zPositionField;
 
     // Start is called before the first frame update
     void Start()
     {
-        playField = GameObject.Find("PlayField");
         zPositionField = playField.transform.position.z;
-
     }
 
     // Update is called once per frame

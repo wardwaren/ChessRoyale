@@ -7,18 +7,16 @@ public class ButtonScript : MonoBehaviour
 {
 
 
-    GameObject Level;
-    GameObject TowerPanel;
-    GameObject Player;
+    [SerializeField] GameObject Level;
+    [SerializeField] GameObject TowerPanel;
+    [SerializeField] GameObject Player;
 
     int TowerNumber = 0;
    
     // Start is called before the first frame update
     void Start()
     {
-        TowerPanel = GameObject.Find("TowerPanel");
-        Level = GameObject.Find("Level");
-        Player = GameObject.Find("Player");
+
     }
 
 
@@ -59,6 +57,7 @@ public class ButtonScript : MonoBehaviour
                 float coins = Player.GetComponent<Player>().GetCoins();
                 if (coins >= price)
                 {
+                    Level.GetComponent<Level>().TowerBought(TowerNumber);
                     Player.GetComponent<Player>().SetCoins(coins - price);
                     Button button = child.GetComponent<Button>();
                     button.GetComponentInChildren<Text>().text = TowerNumber.ToString();

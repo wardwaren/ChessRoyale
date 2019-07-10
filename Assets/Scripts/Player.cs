@@ -7,8 +7,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] float health = 100f;
     [SerializeField] float coins = 1f;
-
-    EnemyControl EnemyControl;
+    [SerializeField] EnemyControl EnemyControl;
     int wave = 0;
     float prevhp = 100f;
     float winstreak = 0f;
@@ -18,7 +17,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         prevhp = health;
-        EnemyControl = FindObjectOfType<EnemyControl>();
     }
 
     // Update is called once per frame

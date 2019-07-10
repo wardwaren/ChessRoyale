@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Boundary : MonoBehaviour
 {
-    Player player;
+    [SerializeField] Player player;
 
     void Start()
     {
-        player = FindObjectOfType<Player>();
 
     }
 

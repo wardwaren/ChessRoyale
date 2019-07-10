@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class CoinDisplay : MonoBehaviour
 {
-    Text scoreText;
-    Player player;
+    [SerializeField] Player player;
 
+    Text scoreText;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         scoreText = GetComponent<Text>();
-        player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame

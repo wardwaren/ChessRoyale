@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class WaveCheck : MonoBehaviour
 {
+    [SerializeField] EnemyControl control;
+
     Text WaveText;
-    EnemyControl control;
+    
     // Start is called before the first frame update
     void Start()
     {
         WaveText = GetComponent<Text>();
-        control = FindObjectOfType<EnemyControl>();
     }
 
     // Update is called once per frame
