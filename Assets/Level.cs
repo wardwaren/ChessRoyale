@@ -7,6 +7,7 @@ public class Level : MonoBehaviour
 {
     [SerializeField] List<GameObject> towers;
 
+    Dictionary<int, int> OwnedTowers = new Dictionary<int, int>();
     GameObject playField;
     GameObject currentTower = null;
     float zPositionField;
@@ -55,6 +56,25 @@ public class Level : MonoBehaviour
     public void SetTower(int num)
     {
         currentTower = towers[num];
+    }
+
+    public GameObject GetTowerByNum(int TowerNumber)
+    {
+        return towers[TowerNumber];
+    }
+
+    public void TowerBought(int TowerNumber)
+    {
+        int value;
+    
+        if(OwnedTowers.TryGetValue(TowerNumber, out value))
+        {
+            OwnedTowers[TowerNumber]++;
+        }
+        else
+        {
+            OwnedTowers.Add(TowerNumber, 1);
+        }
     }
 
 }

@@ -9,6 +9,7 @@ public class ButtonScript : MonoBehaviour
 
     GameObject Level;
     GameObject TowerPanel;
+    GameObject Player;
 
     int TowerNumber = 0;
    
@@ -17,6 +18,7 @@ public class ButtonScript : MonoBehaviour
     {
         TowerPanel = GameObject.Find("TowerPanel");
         Level = GameObject.Find("Level");
+        Player = GameObject.Find("Player");
     }
 
 
@@ -47,16 +49,23 @@ public class ButtonScript : MonoBehaviour
     {
         for (int i = 0; i < TowerPanel.transform.childCount; i++)
         {
-            /// All your stuff with transform.GetChild(i) here...
             GameObject child = TowerPanel.transform.GetChild(i).gameObject;
 
             if (child.activeSelf == false)
             {
-
-                Button button = child.GetComponent<Button>();
-                button.GetComponentInChildren<Text>().text = TowerNumber.ToString();
-                button.GetComponent<ButtonScript>().setTowerNumber(TowerNumber);
-                child.SetActive(true);
+                //Get tower by the number and reduce amount of coins according to price.
+                GameObject Tower = Level.GetComponent<Level>().GetTowerByNum(TowerNumber);
+                float price = Tower.GetComponentInChildren<TowerScript>().getPrice();
+                float coins = Player.GetComponent<Player>().GetCoins();
+                if (coins >= price)
+                {
+                    Player.GetComponent<Player>().SetCoins(coins - price);
+                    Button button = child.GetComponent<Button>();
+                    button.GetComponentInChildren<Text>().text = TowerNumber.ToString();
+                    button.GetComponent<ButtonScript>().setTowerNumber(TowerNumber);
+                    child.SetActive(true);
+                    gameObject.SetActive(false);
+                }
                 break;
             }
         }

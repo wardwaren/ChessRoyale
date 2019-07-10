@@ -26,4 +26,9 @@ public class TowerScript : MonoBehaviour
     {
         
     }
+
+    public float getPrice()
+    {
+        return TowerPrice;
+    }
 }

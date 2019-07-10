@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] float health = 100f;
-    [SerializeField] float coins = 0f;
+    [SerializeField] float coins = 1f;
 
     EnemyControl EnemyControl;
     int wave = 0;
@@ -70,5 +70,10 @@ public class Player : MonoBehaviour
     public float GetCoins()
     {
         return coins;
+    }
+
+    public void SetCoins(float val)
+    {
+        coins = val;
     }
 }
