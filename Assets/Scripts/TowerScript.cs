@@ -8,6 +8,7 @@ public class TowerScript : MonoBehaviour
     [Header("Tower")]
     [SerializeField] float range = 10f;
     [SerializeField] float damage = 200f;
+    [SerializeField] float TowerPrice = 1f;
 
     [Header("Projectile")]
     [SerializeField] GameObject TowerProj;

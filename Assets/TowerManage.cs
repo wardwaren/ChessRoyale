@@ -24,10 +24,7 @@ public class TowerManage : MonoBehaviour
         {
             child.gameObject.SetActive(false); 
         }
-        foreach (Transform child in panel.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        panel.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
