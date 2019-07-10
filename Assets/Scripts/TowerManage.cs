@@ -11,8 +11,10 @@ public class TowerManage : MonoBehaviour
     [SerializeField] GameObject panel;
     [SerializeField] EnemyControl EnemyControl;
 
+    bool locked = false;
     int BoughtTower;
     int wave = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,19 +31,9 @@ public class TowerManage : MonoBehaviour
      
         if (wave == EnemyControl.getWave())
         {
-
-            foreach(Transform child in panel.transform)
+            if(locked == false)
             {
-                if(child.gameObject.activeSelf == false)
-                {
-                    child.gameObject.SetActive(true);
-                }
-
-                Button button = child.gameObject.GetComponent<Button>();
-
-                int value = Random.Range(valmin, valmax);
-                button.GetComponentInChildren<Text>().text = value.ToString();
-                button.GetComponent<ButtonScript>().setTowerNumber(value);
+                RandomizeTowers();
             }
             wave++;
         }
@@ -59,5 +51,42 @@ public class TowerManage : MonoBehaviour
         }
     }
     
+    public void setLock()
+    {
+        if(locked == true)
+        {
+            locked = false;
+        }
 
+        else
+        {
+            locked = true;
+        }
+    }
+
+    public bool getLock()
+    {
+        return locked;
+    }
+
+    public void RandomizeTowers()
+    {
+        foreach (Transform child in panel.transform)
+        {
+            if (child.gameObject.tag == "Offer")
+            {
+                if (child.gameObject.activeSelf == false)
+                {
+                    child.gameObject.SetActive(true);
+                }
+
+                Button button = child.gameObject.GetComponent<Button>();
+
+                int value = Random.Range(valmin, valmax);
+                button.GetComponentInChildren<Text>().text = value.ToString();
+                button.GetComponent<ButtonScript>().setTowerNumber(value);
+            }
+
+        }
+    }
 }
