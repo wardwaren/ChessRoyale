@@ -28,12 +28,12 @@ public class Level : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray,out hit,1000f))
             {
-                string name = hit.collider.gameObject.name;
+                string tag = hit.collider.gameObject.tag;
                 Debug.Log(hit.point);
                 Vector3 wordPos = hit.point;
                 Debug.Log(name);
 
-                if(name == "PlayField")
+                if(tag == "PlayField")
                 {
                     Instantiate(currentTower, wordPos, transform.rotation);
                     currentTower = null;
