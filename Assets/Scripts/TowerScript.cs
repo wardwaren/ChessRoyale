@@ -43,6 +43,11 @@ public class TowerScript : MonoBehaviour
     void OnMouseDown()
     {
 
-        TowerPanel.TurnPanel(range,damage,level,id);
+        TowerPanel.TurnPanel(range,damage,level,id, gameObject);
+    }
+
+    public float getTowerPrice()
+    {
+        return TowerPrice;
     }
 }

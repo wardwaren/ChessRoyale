@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b2d68e6b5a25d4eb424f70c3f486c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
-  damage: 200
+  range: 20
+  damage: 5
   TowerPrice: 1
   level: 1
   id: 1
@@ -113,5 +113,3 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 10
   projectileFiringPeriod: 0.1
-  TowerPanel: {fileID: 3487613797369007077, guid: 0be6f34668d11564d9796a17fbd792b8,
-    type: 3}
