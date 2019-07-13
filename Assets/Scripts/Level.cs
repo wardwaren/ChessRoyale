@@ -35,7 +35,14 @@ public class Level : MonoBehaviour
 
     public void SetTower(int num)
     {
-        currentTower = towers[num];
+        if (num >= 0)
+        {
+            currentTower = towers[num];
+        }
+        else
+        {
+            currentTower = null;
+        }
     }
 
     public GameObject GetTowerByNum(int TowerNumber)
@@ -64,14 +71,13 @@ public class Level : MonoBehaviour
 
     public void CreateTower(GameObject Tower)
     {
+        Debug.Log(Tower);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 1000f))
         {
             string tag = hit.collider.gameObject.tag;
-            Debug.Log(hit.point);
             Vector3 wordPos = hit.point;
-            Debug.Log(name);
 
             if (tag == "PlayField")
             {

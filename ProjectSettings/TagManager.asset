@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Tower
+  - Offer
+  - Panel
+  - PlayField
+  - TowerInfo
   layers:
   - Default
   - TransparentFX

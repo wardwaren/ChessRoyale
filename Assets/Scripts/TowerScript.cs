@@ -23,10 +23,12 @@ public class TowerScript : MonoBehaviour
     GameObject TowerInfo;
     TowerPanel TowerPanel;
     Level LevelScript;
+    float HoldTimer = 0f;
 
     private Vector3 screenPoint;
     private Vector3 offset;
     bool dragging = false;
+    Color TowerColor;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,7 @@ public class TowerScript : MonoBehaviour
         Level = GameObject.FindWithTag("Level");
         TowerPanel = TowerInfo.GetComponent<TowerPanel>();
         LevelScript = Level.GetComponent<Level>();
+        TowerColor = gameObject.GetComponent<Renderer>().material.color;
     }
 
     // Update is called once per frame
@@ -58,10 +61,16 @@ public class TowerScript : MonoBehaviour
 
     void OnMouseDrag()
     {
-        dragging = true;
-        Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, LevelScript.getZfield() + 15f);
-        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
-        transform.position = cursorPosition;
+        HoldTimer += Time.deltaTime;
+        if(HoldTimer >= 1)
+        {
+            dragging = true;
+            Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, LevelScript.getZfield() + 15f);
+            Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
+            transform.position = cursorPosition;
+            TowerColor.r = 0.5f;
+            gameObject.GetComponent<Renderer>().material.color = TowerColor;
+        }
     }
 
     void OnMouseUp()
@@ -70,6 +79,10 @@ public class TowerScript : MonoBehaviour
         {
             Destroy(gameObject);
             LevelScript.SetTower(id + 1);
+            LevelScript.CreateTower(LevelScript.getTower());
+            LevelScript.SetTower(-1);
+            HoldTimer = 0;
+            dragging = false;
         }
     }
 
