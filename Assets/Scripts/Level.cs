@@ -24,28 +24,10 @@ public class Level : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && currentTower != null)
         {
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray,out hit,1000f))
-            {
-                string tag = hit.collider.gameObject.tag;
-                Debug.Log(hit.point);
-                Vector3 wordPos = hit.point;
-                Debug.Log(name);
-
-                if(tag == "PlayField")
-                {
-                    Instantiate(currentTower, wordPos, transform.rotation);
-                    currentTower = null;
-
-                }
-            }
-
+            CreateTower(currentTower);
         }
-
-         
     }
-    
+
     public GameObject getTower()
     {
         return currentTower;
@@ -64,8 +46,8 @@ public class Level : MonoBehaviour
     public void TowerBought(int TowerNumber)
     {
         int value;
-    
-        if(OwnedTowers.TryGetValue(TowerNumber, out value))
+
+        if (OwnedTowers.TryGetValue(TowerNumber, out value))
         {
             OwnedTowers[TowerNumber]++;
         }
@@ -75,4 +57,27 @@ public class Level : MonoBehaviour
         }
     }
 
+    public float getZfield()
+    {
+        return zPositionField;
+    }
+
+    public void CreateTower(GameObject Tower)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 1000f))
+        {
+            string tag = hit.collider.gameObject.tag;
+            Debug.Log(hit.point);
+            Vector3 wordPos = hit.point;
+            Debug.Log(name);
+
+            if (tag == "PlayField")
+            {
+                Instantiate(Tower, wordPos, transform.rotation);
+                currentTower = null;
+            }
+        }
+    }
 }
