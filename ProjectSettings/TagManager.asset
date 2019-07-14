@@ -10,6 +10,7 @@ TagManager:
   - Panel
   - PlayField
   - TowerInfo
+  - Level
   layers:
   - Default
   - TransparentFX

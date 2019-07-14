@@ -84,6 +84,7 @@ public class Level : MonoBehaviour
                 Instantiate(Tower, wordPos, transform.rotation);
                 currentTower = null;
             }
+
         }
     }
 }
