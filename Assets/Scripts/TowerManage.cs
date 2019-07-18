@@ -84,7 +84,7 @@ public class TowerManage : MonoBehaviour
 
                 int value = Random.Range(valmin, valmax);
                 button.GetComponentInChildren<Text>().text = value.ToString();
-                button.GetComponent<ButtonScript>().setTowerNumber(value);
+                button.GetComponent<ButtonScript>().setTowerNumber(value,1);
             }
 
         }

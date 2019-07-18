@@ -96,7 +96,7 @@ public class TowerScript : MonoBehaviour
                 {
                     transform.position = wordPos;
                    // Instantiate(gameObject, wordPos, transform.rotation);
-                    LevelScript.SetTower(-1);
+                    LevelScript.SetTower(-1,1);
                     gameObject.GetComponent<Renderer>().material.color = OldColor;
                     oldPosition = transform.position;
                 }
@@ -107,11 +107,11 @@ public class TowerScript : MonoBehaviour
                         GameObject child = TowerOfferPanel.transform.GetChild(i).gameObject;
                         if (child.activeSelf == false)
                         {
-                            GameObject Tower = Level.GetComponent<Level>().GetTowerByNum(id + 1);
-                            Level.GetComponent<Level>().TowerBought(id + 1);
+                            GameObject Tower = Level.GetComponent<Level>().GetTowerByNum(id);
+                            Level.GetComponent<Level>().TowerBought(id);
                             Button button = child.GetComponent<Button>();
-                            button.GetComponentInChildren<Text>().text = (id + 1).ToString();
-                            button.GetComponent<ButtonScript>().setTowerNumber(id + 1);
+                            button.GetComponentInChildren<Text>().text = (id).ToString();
+                            button.GetComponent<ButtonScript>().setTowerNumber(id, level);
                             child.SetActive(true);
                             Destroy(gameObject);
                             break;
@@ -137,6 +137,10 @@ public class TowerScript : MonoBehaviour
         }
     }
     
+    public int getId()
+    {
+        return id;
+    }
 
     public float getTowerPrice()
     {

@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
-
-
+    
     [SerializeField] GameObject Level;
     [SerializeField] GameObject TowerPanel;
     [SerializeField] GameObject Player;
 
+    int Lvl = 1;
     int TowerNumber = 0;
-   
+    int TowerLevel = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +28,11 @@ public class ButtonScript : MonoBehaviour
         }
     }
 
-    public void setTowerNumber(int num)
+    public void setTowerNumber(int num, int lvl)
     {
         TowerNumber = num;
+        TowerLevel = lvl;
+        gameObject.GetComponentInChildren<Text>().text = TowerNumber.ToString() + " " + TowerLevel.ToString();
     }
 
     public int getTowerNumber()
@@ -38,9 +40,13 @@ public class ButtonScript : MonoBehaviour
         return TowerNumber;
     }
 
+    public int getTowerLevel()
+    {
+        return TowerLevel;
+    }
     public void setCurrentTower()
     {
-        Level.GetComponent<Level>().SetTower(TowerNumber);
+        Level.GetComponent<Level>().SetTower(TowerNumber,TowerLevel);
     }
 
     public void AssignValue()
@@ -57,13 +63,13 @@ public class ButtonScript : MonoBehaviour
                 float coins = Player.GetComponent<Player>().GetCoins();
                 if (coins >= price)
                 {
-                    Level.GetComponent<Level>().TowerBought(TowerNumber);
                     Player.GetComponent<Player>().SetCoins(coins - price);
                     Button button = child.GetComponent<Button>();
-                    button.GetComponentInChildren<Text>().text = TowerNumber.ToString();
-                    button.GetComponent<ButtonScript>().setTowerNumber(TowerNumber);
+                    button.GetComponentInChildren<Text>().text = TowerNumber.ToString() + " " + TowerLevel.ToString();
+                    button.GetComponent<ButtonScript>().setTowerNumber(TowerNumber, Lvl);
                     child.SetActive(true);
                     gameObject.SetActive(false);
+                    Level.GetComponent<Level>().TowerBought(TowerNumber);
                 }
                 break;
             }

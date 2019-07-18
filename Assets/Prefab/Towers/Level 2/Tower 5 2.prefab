@@ -113,5 +113,4 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 10
   projectileFiringPeriod: 0.1
-  TowerPanel: {fileID: 3487613797369007077, guid: 0be6f34668d11564d9796a17fbd792b8,
-    type: 3}
+  Level: {fileID: 0}
